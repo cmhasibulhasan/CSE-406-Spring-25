@@ -2,22 +2,20 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void solve()
-{
 
-}
 int main()
 {
-//    int n;
-//    cin >> n;
-//    int a[n],b[n];
-//
-////    for(int i=0;i<n;i++)cin >> a[i];
-////    for(int i=0;i<n;i++)cin >> b[i];
+    int n;
+    cout << "Enter number of Proccess:" << endl;
+    cin >> n;
+    int a[n],b[n];
+    cout << "Enter Arrival Time: " << endl;
 
-    int n=4;
-    int a[n]= {0,1,2,3};
-    int b[n]= {3,2,1,4};
+    for(int i=0;i<n;i++)cin >> a[i];
+    cout << "Enter Burst Time:" << endl;
+    for(int i=0;i<n;i++)cin >> b[i];
+
+
     int ct[n];
     for(int i=0; i<n; i++)
     {
@@ -28,6 +26,7 @@ int main()
     {
         ct[i]=ct[i-1]+b[i];
     }
+    cout << endl;
     cout << "Completion Time: " ;
     for(int i=0; i<n; i++)
     {
